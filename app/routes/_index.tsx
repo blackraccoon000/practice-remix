@@ -1,6 +1,5 @@
-import type {MetaFunction} from "@remix-run/node";
-import {Link} from "@remix-run/react";
-import {$path} from "safe-routes";
+import type {MetaFunction} from "react-router";
+import {Link} from "react-router";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,10 +10,10 @@ export const meta: MetaFunction = () => {
 
 const Index = () => (
   <div className="flex flex-col gap-4">
-    <Link to={$path("/reproduction/bicycle")}>bicycle page</Link>
-    <Link to={$path("/reproduction/portfolio")}>portfolio page</Link>
-    <Link to={$path("/blog/:articleId", {articleId: 1})}>portfolio page</Link>
-    <Link to={$path("/blog/:articleId")}>portfolio page</Link>
+    <Link to={"/reproduction/bicycle"}>bicycle page</Link>
+    <Link to={"/reproduction/portfolio"}>portfolio page</Link>
+    <Link to={"/blog/1"}>portfolio page</Link>
+    <Link to={"/blog/1"}>portfolio page</Link>
   </div>
 );
 

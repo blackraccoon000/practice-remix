@@ -1,4 +1,4 @@
-import {MetaFunction} from "@remix-run/node";
+import { MetaFunction } from "react-router";
 import {articles} from "./constants";
 import {Header} from "./Header";
 import {SiteTitle} from "./Header/Bicycle/SiteTitle";
