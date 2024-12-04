@@ -8,15 +8,18 @@
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/server/index.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "safe-routes-check": "safe-routes typegen && tsc"
   },
   "dependencies": {
     "@remix-run/node": "^2.15.0",
     "@remix-run/react": "^2.15.0",
     "@remix-run/serve": "^2.15.0",
+    "@routes-gen/remix": "^0.3.7",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "safe-routes": "^1.0.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.15.0",
