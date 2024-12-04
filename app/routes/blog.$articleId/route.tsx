@@ -1,20 +1,20 @@
-import {Form, useLoaderData} from "@remix-run/react";
+import {Form, useLoaderData} from "react-router";
 import {useEffect} from "react";
-// import type { FunctionComponent } from "react";
+import type {Route} from "./+types/route";
 
-// import type { ContactRecord } from "../data";
-
-export const loader = async ({params}: {params: unknown}) => {
-  console.log({params});
-  return params;
+// ここでRoute.LoaderArgsを使うと型補完される。
+// この機能は前までなかった。
+export const loader = async (context: Route.LoaderArgs) => {
+  console.log({context}, context.params.articleId);
+  return context;
 };
 
-export default function Blog(props: unknown) {
-  const data = useLoaderData<typeof loader>();
+export default function Blog() {
+  const context = useLoaderData<typeof loader>();
 
   useEffect(() => {
-    console.log({data, props});
-  }, [data, props]);
+    console.log({context});
+  }, [context]);
 
   const contact = {
     first: "Your",
