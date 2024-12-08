@@ -1,20 +1,21 @@
-import {Form, useLoaderData} from "react-router";
+import {Form, useLoaderData, useParams} from "react-router";
 import {useEffect} from "react";
 import type {Route} from "./+types/route";
 
 // ここでRoute.LoaderArgsを使うと型補完される。
 // この機能は前までなかった。
 export const loader = async (context: Route.LoaderArgs) => {
-  console.log({context}, context.params.articleId);
+  console.log({context});
   return context;
 };
 
 export default function Blog() {
   const context = useLoaderData<typeof loader>();
+  const params = useParams();
 
   useEffect(() => {
-    console.log({context});
-  }, [context]);
+    console.log({context, params});
+  }, [context, params]);
 
   const contact = {
     first: "Your",

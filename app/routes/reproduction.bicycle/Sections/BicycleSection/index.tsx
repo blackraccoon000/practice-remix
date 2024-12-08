@@ -1,4 +1,4 @@
-import {ComponentPropsWithRef} from "react";
+import type {ComponentPropsWithRef} from "react";
 import {DefaultSection} from "../DefaultSection";
 import {BicycleArticle} from "./BicycleArticle";
 

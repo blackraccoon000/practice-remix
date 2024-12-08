@@ -12,15 +12,20 @@ export const meta: MetaFunction = () => {
 const Index = () => (
   <div className="flex flex-col gap-4">
     <Link to={"/reproduction/bicycle"}>bicycle page</Link>
-    <Link to={"/reproduction/portfolio"}>portfolio page</Link>
     <Link
-      to={$path("/blog/:articleId", {
+      to={$path("/reproduction/portfolio", {
+        view: "list",
+      })}
+    >
+      portfolio page
+    </Link>
+    <Link
+      to={$path("/", {
         articleId: "1",
       })}
     >
       portfolio page
     </Link>
-    <Link to={"/blog/1"}>portfolio page</Link>
   </div>
 );
 

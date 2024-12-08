@@ -1,23 +1,23 @@
-import { MetaFunction } from "react-router";
-import {articles} from "./constants";
+import type {MetaFunction} from "react-router";
 import {Header} from "./Header";
-import {SiteTitle} from "./Header/Bicycle/SiteTitle";
-import {NavBar} from "./Header/Bicycle/NavBar";
+import {SiteTitle} from "./Header/SiteTitle";
+import {NavBar} from "./Header/NavBar";
 import {AboutSection} from "./Sections/AboutSection";
 import {BicycleSection} from "./Sections/BicycleSection";
 import {Footer} from "./Footer";
+import {articles} from "./constants";
 
 export const meta: MetaFunction = () => {
   return [
-    {title: "MY Works - Portfolio Page"},
-    {name: "description", content: "Portfolio Page"},
+    {title: "Bicycle"},
+    {name: "description", content: "Reproduction Bicycle Page"},
   ];
 };
 
 /**
- * 模写: https://code-jump.com/demo/html/portfolio1/
+ * 模写: https://code-jump.com/demo/html/profile
  */
-export const Portfolio = () => {
+export const Bicycle = () => {
   return (
     <div className="flex flex-col h-full">
       <Header SiteTitle={SiteTitle} NavBar={NavBar} />
@@ -44,4 +44,4 @@ I love web technologies and I'm always looking for new things to learn.`}
   );
 };
 
-export default Portfolio;
+export default Bicycle;
